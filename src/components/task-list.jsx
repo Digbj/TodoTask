@@ -34,20 +34,20 @@ console.log(userData);
     return (
       <div className="flex flex-col tab bg-gradient-to-r from-sky-500 to-indigo-500 h-[100vh]">
         <div>
-          <Link to="/addtask">
+          <Link to="/">
             <button className="border border-black p-1 rounded-lg bg-violet-300 ml-[80%]">
               Add Task
             </button>
           </Link>
         </div>
-        <div>
+        <div className="flex  flex-col items-center justify-center">
           <h2 className="font-sans font-bold text-center">Task Details</h2>
-          <table className="overflow-x-auto">
-            <thead>
-              <tr>
-                <th>Task Name</th>
-                <th>Task Details</th>
-                <th>Modify Details</th>
+          <table className="overflow-x-auto mt-5">
+            <thead className="border border-black">
+              <tr className="p-1">
+                <th className="border border-black mx-3">Task Name</th>
+                <th className="border border-black ">Task Details</th>
+                <th className="border border-black">Modify Details</th>
               </tr>
             </thead>
             <tbody>
@@ -59,7 +59,7 @@ console.log(userData);
                         className="w-24 outline-none"
                         type="text"
                         value={editedData.taskName}
-                        onChange={(e) => handleInputChange(e, "firstName")}
+                        onChange={(e) => handleInputChange(e, "taskName")}
                       />
                     ) : (
                       user.taskName
@@ -71,7 +71,7 @@ console.log(userData);
                         className="w-24 outline-none"
                         type="text"
                         value={editedData.taskDetails}
-                        onChange={(e) => handleInputChange(e, "lastName")}
+                        onChange={(e) => handleInputChange(e, "taskDetails")}
                       />
                     ) : (
                       user.taskDetails

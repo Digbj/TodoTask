@@ -14,7 +14,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           {/* <Route path="/" element={<Home />} /> */}
-          <Route path="/addtask" element={<TaskForm />} />
+          <Route path="/" element={<TaskForm />} />
           <Route path="/showList" element={<TaskList />} />
           <Route path="/taskDetails" element={<TaskDetails />} />
           <Route path="*" element={<Home />} />
